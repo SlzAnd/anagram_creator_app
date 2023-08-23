@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="web_orange">#FFAA00</color>
+    <color name="silver_chalice">#ACACAC</color>
+    <color name="grey">#8D8D8D</color>
+    <color name="grey_10">#E6E4EA</color>
 </resources>

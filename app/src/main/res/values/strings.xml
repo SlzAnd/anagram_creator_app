@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">task1_anagram</string>
+    <string name="app_name">Task 1</string>
+    <string name="input_text_hint">Enter text for anagram</string>
+    <string name="input_text_label">Text for anagram</string>
+    <string name="input_filter_hint">Enter symbols to ignore</string>
+    <string name="anagram_hint">Here must be your anagram</string>
 </resources>

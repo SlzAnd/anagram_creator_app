@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="315dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/Base.Theme.Task1_anagram">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_input_text"
+        style="@style/CustomTextInputLayout.FilledBox"
+        android:hint="@string/input_text_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_input_text"
+            style="@style/CustomTextInputEditText.FilledBox"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_filter_text"
+        style="@style/CustomTextInputLayout.FilledBox"
+        android:layout_marginTop="13dp"
+        android:hint="@string/input_filter_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_filter_text"
+            style="@style/CustomTextInputEditText.FilledBox"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/poppins_600"
+        android:text="@string/anagram_hint"
+        android:textSize="16sp"
+        android:textAlignment="center">
+
+    </TextView>
+
+</LinearLayout>

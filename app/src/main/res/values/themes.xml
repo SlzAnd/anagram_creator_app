@@ -1,8 +1,57 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Task1_anagram" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/web_orange</item>
+         <item name="colorOnPrimary">@color/white</item>
+         <item name="colorSurfaceContainerHighest">@color/grey_10</item>
+         <item name="colorSurface">@color/grey_10</item>
+         <item name="colorOnSurface">@color/grey</item>
+         <item name="colorSecondary">@color/silver_chalice</item>
+    </style>
+
+    <style name="CustomTextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingTop">9dp</item>
+        <item name="boxStrokeColor">@color/grey_10</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="android:fontFamily">@font/poppins_500</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:textAlignment">center</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <style name="CustomTextInputEditText.FilledBox" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">98dp</item>
+        <item name="android:paddingTop">27dp</item>
+        <item name="android:paddingStart">27dp</item>
+        <item name="background">@color/grey_10</item>
+        <item name="android:fontFamily">@font/poppins_500</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <style name="HintTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CustomShapeAppearance" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+    </style>
+
+    <style name="TitleTextAppearance" parent="">
+        <item name="fontFamily">@font/poppins_500</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="Theme.Task1_anagram" parent="Base.Theme.Task1_anagram" />
