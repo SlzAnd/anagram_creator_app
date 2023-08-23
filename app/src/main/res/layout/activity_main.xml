@@ -5,61 +5,31 @@
     style="@style/Base.Theme.Task1_anagram"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:minHeight="?attr/actionBarSize"-->
-<!--        android:theme="?attr/actionBarTheme"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        android:gravity="center"-->
-<!--        >-->
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/app_name"-->
-<!--            android:textAlignment="center"-->
-<!--            android:fontFamily="@font/poppins_500"-->
-<!--            android:textSize="14sp"-->
-<!--            android:textColor="@color/white"-->
-<!--            />-->
-
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        >
-
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:background="@drawable/rounded_corner_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="@string/app_name"
-            app:titleCentered="true"
-            android:background="@color/web_orange"
-            app:titleTextColor="@color/white"
-            app:titleTextAppearance="@style/TitleTextAppearance"
-            android:elevation="4dp"
-            >
-        </com.google.android.material.appbar.MaterialToolbar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_500"
+            android:paddingBottom="9dp"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_input"
@@ -70,7 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_input"
-        />
+        tools:layout="@layout/fragment_input" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
