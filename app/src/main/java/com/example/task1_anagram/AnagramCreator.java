@@ -16,23 +16,27 @@ public class AnagramCreator {
             Map<Integer, Character> filteredChars = new HashMap<>();
 
             for (int i = 0; i < chars.length; i++) {
-                if (filter == null ? String.valueOf(chars[i]).matches(filterRegex)
-                : filter.indexOf(chars[i]) != -1) {
-                    filteredChars.put(i, chars[i]);
+                char currentChar = chars[i];
+                if (filter == null
+                        ? String.valueOf(currentChar).matches(filterRegex) // check if char matches regex
+                        : filter.indexOf(currentChar) != -1 // check if char is in filters
+                ) {
+                    filteredChars.put(i, currentChar);
                 } else {
-                    reversedWord.append(chars[i]);
+                    reversedWord.append(currentChar);
                 }
             }
             reversedWord.reverse();
             filteredChars.keySet().forEach(index -> {
-                Character c = filteredChars.get(index);
-                if (c != null) {
-                    reversedWord.insert(index.intValue(), c);
+                Character filteredChar = filteredChars.get(index);
+                if (filteredChar != null) {
+                    reversedWord.insert(index.intValue(), filteredChar);
                 }
             });
             anagram.append(reversedWord).append(" ");
         }
-
         return anagram.toString().trim();
     }
+
+
 }
