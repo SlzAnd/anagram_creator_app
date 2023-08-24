@@ -33,14 +33,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/tv_anagram"
+        style="@style/InitialTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:fontFamily="@font/poppins_600"
         android:text="@string/anagram_hint"
-        android:textSize="16sp"
         android:textAlignment="center">
-
     </TextView>
 
 </LinearLayout>

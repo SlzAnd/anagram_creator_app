@@ -53,5 +53,21 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+
+    <style name="InitialTextViewStyle" parent="">
+        <item name="fontFamily">@font/poppins_600</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_marginTop">29dp</item>
+    </style>
+
+    <style name="AnagramTextViewStyle" parent="">
+        <item name="fontFamily">@font/poppins_500</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/web_orange</item>
+        <item name="android:layout_marginTop">29dp</item>
+    </style>
+
+
     <style name="Theme.Task1_anagram" parent="Base.Theme.Task1_anagram" />
 </resources>

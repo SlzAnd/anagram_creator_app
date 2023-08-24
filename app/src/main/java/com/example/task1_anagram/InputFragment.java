@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +21,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class InputFragment extends Fragment {
+
+    private final AnagramCreator anagramCreator = new AnagramCreator();
 
     private FragmentInputBinding binding = null;
     @Nullable
@@ -49,11 +52,11 @@ public class InputFragment extends Fragment {
             }
         });
     }
+
     private void changeStyleFromTextChanges(TextInputEditText editText) {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -71,6 +74,21 @@ public class InputFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
+                String anagram;
+                TextView anagramTextView = binding.tvAnagram;
+                if (binding.etFilterText.getEditableText().length() == 0) {
+                    anagram = anagramCreator.createAnagram(
+                            binding.etInputText.getEditableText().toString(),
+                            null
+                    );
+                } else {
+                    anagram = anagramCreator.createAnagram(
+                            binding.etInputText.getEditableText().toString(),
+                            binding.etFilterText.getEditableText().toString()
+                    );
+                }
+                anagramTextView.setText(anagram);
+                anagramTextView.setTextAppearance(R.style.AnagramTextViewStyle);
             }
 
         });
