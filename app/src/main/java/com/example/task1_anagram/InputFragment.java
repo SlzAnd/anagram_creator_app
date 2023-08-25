@@ -20,10 +20,11 @@ import com.example.task1_anagram.databinding.FragmentInputBinding;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+
+
 public class InputFragment extends Fragment {
 
-    private final AnagramCreator anagramCreator = new AnagramCreator();
-
+    AnagramCreator anagramCreator = new AnagramCreator();
     private FragmentInputBinding binding = null;
     @Nullable
     @Override
@@ -76,17 +77,21 @@ public class InputFragment extends Fragment {
             public void afterTextChanged(Editable s) {
                 String anagram;
                 TextView anagramTextView = binding.tvAnagram;
-                if (binding.etFilterText.getEditableText().length() == 0) {
+                Editable textEditable = binding.etInputText.getEditableText();
+                Editable filterEditable = binding.etFilterText.getEditableText();
+
+                if (filterEditable.length() == 0) {
                     anagram = anagramCreator.createAnagram(
-                            binding.etInputText.getEditableText().toString(),
+                            textEditable.toString(),
                             null
                     );
                 } else {
                     anagram = anagramCreator.createAnagram(
-                            binding.etInputText.getEditableText().toString(),
-                            binding.etFilterText.getEditableText().toString()
+                            textEditable.toString(),
+                            filterEditable.toString()
                     );
                 }
+
                 anagramTextView.setText(anagram);
                 anagramTextView.setTextAppearance(R.style.AnagramTextViewStyle);
             }
