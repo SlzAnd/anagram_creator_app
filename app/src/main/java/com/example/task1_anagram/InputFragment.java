@@ -80,17 +80,10 @@ public class InputFragment extends Fragment {
                 Editable textEditable = binding.etInputText.getEditableText();
                 Editable filterEditable = binding.etFilterText.getEditableText();
 
-                if (filterEditable.length() == 0) {
-                    anagram = anagramCreator.createAnagram(
-                            textEditable.toString(),
-                            null
-                    );
-                } else {
-                    anagram = anagramCreator.createAnagram(
-                            textEditable.toString(),
-                            filterEditable.toString()
-                    );
-                }
+                anagram = anagramCreator.createAnagram(
+                    textEditable.toString(),
+                    filterEditable.toString()
+                );
 
                 anagramTextView.setText(anagram);
                 anagramTextView.setTextAppearance(R.style.AnagramTextViewStyle);

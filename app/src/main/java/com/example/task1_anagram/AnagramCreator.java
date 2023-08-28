@@ -6,6 +6,7 @@ import java.util.Map;
 public class AnagramCreator {
 
     public String createAnagram(String text, String filter) {
+
         String[] words = text.split(" ");
         StringBuilder anagram = new StringBuilder();
         String filterRegex = "[^a-zA-z]"; // matches digits and special symbols
@@ -17,7 +18,7 @@ public class AnagramCreator {
 
             for (int i = 0; i < chars.length; i++) {
                 char currentChar = chars[i];
-                if (filter == null
+                if (filter.isBlank()
                         ? String.valueOf(currentChar).matches(filterRegex) // check if char matches regex
                         : filter.indexOf(currentChar) != -1 // check if char is in filters
                 ) {
