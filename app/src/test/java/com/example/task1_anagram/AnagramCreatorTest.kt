@@ -2,11 +2,17 @@ package com.example.task1_anagram;
 
 
 import com.google.common.truth.Truth.assertThat
+import org.junit.Before
 import org.junit.Test;
 
 class AnagramCreatorTest {
 
-    private val anagramCreator = AnagramCreator()
+    private lateinit var anagramCreator: AnagramCreator
+
+    @Before
+    fun setup() {
+        anagramCreator = AnagramCreator()
+    }
 
     @Test
     fun `empty input fields returns empty string result`() {
