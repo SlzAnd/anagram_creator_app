@@ -25,11 +25,11 @@ If text with filtering symbols is not empty, than ignored symbols are entered by
 
 <img src="./screenshots/third.png" width="306" height="658">
 
-Creation of anagram - automatic. User immediately see the result.
-
 It's also works for cyrillic input:
 
 <img src="./screenshots/third_1.png" width="306" height="658">
+
+Creation of anagram - automatic. User immediately see the result.
 
 Also I have unit tests for this project:
 
