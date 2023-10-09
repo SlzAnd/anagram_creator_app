@@ -27,13 +27,17 @@ If text with filtering symbols is not empty, than ignored symbols are entered by
 
 Creation of anagram - automatic. User immediately see the result.
 
+It's also works for cyrillic input:
+
+<img src="./screenshots/third_1.png" width="306" height="658">
+
 Also I have unit tests for this project:
 
-<img src="./screenshots/Unit_tests.png" width="306" height="658">
+<img src="./screenshots/Unit_tests.png" width="658" height="306">
 
 and UI tests using Espresso framework:
 
-<img src="./screenshots/UI_tests.png" width="306" height="658">
+<img src="./screenshots/UI_tests.png" width="658" height="306">
 
 
 Thank you for your interest in my project. Feel free to explore the code and project structure. If you have any questions or suggestions, please don't hesitate to reach out!
